@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: "local"
+
+mongodb:
+  address: "${MONGO_DB_ADDRESS:#{'mongodb://admin:admin@localhost:27017'}}"
+
+redsky:
+  endpoint: "https://redsky.target.com/v3"

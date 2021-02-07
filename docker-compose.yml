@@ -1,0 +1,18 @@
+version: "3"
+services:
+  db:
+    image: "mongo:latest"
+    restart: "always"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "admin"
+      MONGO_INITDB_ROOT_PASSWORD: "admin"
+    ports:
+      - "27017:27017"
+  app:
+    image: "${DOCKER_TAG}"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "db"
+    environment:
+      - "MONGO_DB_ADDRESS=mongodb://admin:admin@db:27017"
