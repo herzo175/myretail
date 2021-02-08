@@ -56,8 +56,8 @@ data (Otherwise it will return a 404).
 Body: `application/json`:
 ```bash
 {
-	"value": 13.57,
-	"currency_code": "USD"
+    "value": 13.57,
+    "currency_code": "USD"
 }
 ```
 
